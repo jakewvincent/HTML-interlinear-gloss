@@ -1,8 +1,35 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link type="text/css" rel="stylesheet" href="stylesheet.css">
-        <link href="https://fonts.googleapis.com/css?family=Merriweather|Merriweather+Sans:300,700&display=swap&subset=latin-ext" rel="stylesheet">
+        <style>
+            .example {	/* Div consisting of all gloss units and free translation */
+                margin-left: 1.5rem;
+            }
+
+            .all-align-units {	/* Div consisting of all align-units, excluding the free translation */
+            }
+
+            .all-align-units .align-unit:not(:first-child){	/* Give all the non-initial align-units a left margin to ease readability */
+                margin-left: 0.25em;
+            }
+
+            .align-unit {	/* Div consisting of word and gloss to be vertically left-aligned */
+                display: inline-block;
+            }
+
+            .word {	/* Single word in the text. Keep here just in case. */
+            }
+
+            .gloss {	/* Gloss/translation of the single word. Keep here just in case. */
+            }
+
+            .gloss span {	/* Makes anything in a span tag within the gloss class small-caps, e.g. for lexical features */
+                font-variant: small-caps;
+            }
+
+            .free-transl {	/* English translation of text */
+            }    
+        </style>
         <meta charset = "UTF-8">
     </head>
     <body onload="clearFields(); initialState()">
@@ -63,12 +90,12 @@
                 <textarea type="text" id="textOut" style="width:50%; height:20em;" onclick="selectAll('textOut')"></textarea>
             </fieldset>
         </form>
-        <script src="scripts/lingGlossHTML.js"></script>
-        <script src="scripts/clearFields.js"></script>
-        <script src="scripts/addGlossUnit.js"></script>
-        <script src="scripts/selectOnClick.js"></script>
-        <script src="scripts/showExample.js"></script>
-        <script src="scripts/initialState.js"></script>
-        <script src="scripts/resetFields.js"></script>
+        <script src="lingGlossHTML.js"></script>
+        <script src="clearFormOnLoad.js"></script>
+        <script src="addGlossUnit.js"></script>
+        <script src="selectOnClick.js"></script>
+        <script src="showExample.js"></script>
+        <script src="initialState.js"></script>
+        <script src="resetFields.js"></script>
     </body>
 </html>
